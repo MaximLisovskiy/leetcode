@@ -3,11 +3,14 @@ class Solution(object):
     def plusOne(self, digits: list) -> list:
         number = int("".join(map(str, digits)))
         number += 1
-        new_list = str(number)
-        new_list_1 = []
-        for i in new_list:
-            new_list_1.append(int(i))
-        return new_list_1
+        convert_to_string = str(number)
+        list_plus_one = []
+        try:
+            for i in convert_to_string:
+                list_plus_one.append(int(i))
+            return list_plus_one
+        except:
+            return "You need the list"
 
 result = Solution()
 print(result.plusOne([4, 3, 2, 1]))
