@@ -1,6 +1,6 @@
 from collections import Counter
 class Solution(object):
-    def singleNumber(self, nums):
+    def singleNumber(self, nums: list) -> int:
         try:
             new_dict = Counter(nums)
             for key, value in new_dict.items():
@@ -10,4 +10,4 @@ class Solution(object):
             return "You need enter the list"
 
 result = Solution()
-print(result.singleNumber(1))
+print(result.singleNumber([1, 2, 1, 4, 2]))
