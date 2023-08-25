@@ -2,8 +2,8 @@ from collections import Counter
 
 class Solution(object):
     def singleNumber(self, nums: list) -> int:
+        new_dict = Counter(nums)
         try:
-            new_dict = Counter(nums)
             for key, value in new_dict.items():
                 if value == 1:
                     return key
