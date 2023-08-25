@@ -1,4 +1,5 @@
 from collections import Counter
+
 class Solution(object):
     def singleNumber(self, nums: list) -> int:
         try:
