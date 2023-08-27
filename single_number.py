@@ -2,13 +2,13 @@ from collections import Counter
 
 class Solution(object):
     def singleNumber(self, nums: list) -> int:
-        new_dict = Counter(nums)
         try:
+            new_dict = Counter(nums)
             for key, value in new_dict.items():
                 if value == 1:
                     return key
-        except Exception:
+        except:
             return "You need enter the list"
 
 result = Solution()
-print(result.singleNumber([1, 2, 2, 1, 4]))
+print(result.singleNumber([1, 2, 1, 2, 4]))
